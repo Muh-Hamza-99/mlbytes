@@ -16,7 +16,7 @@ const BlogCard = ({ title, description }: Props) => {
             <p>{description}</p>
         </CardContent>
         <CardFooter>
-            <Link className="font-bold" href="/">Read more</Link>
+            <Link className="font-bold hover:text-primary transition" href="/">Read more</Link>
         </CardFooter>
     </Card>
   );
