@@ -1,6 +1,7 @@
 import BlogCard from "@/components/blogcard";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import Link from "next/link";
 
 const data: {title: string, description: string}[] = [
   {
@@ -20,7 +21,9 @@ const data: {title: string, description: string}[] = [
 export default function Home() {
   return (
     <>
-      <Button className="text-xl rounded-2xl fixed bottom-0 right-0 m-2">+</Button>
+      <Link href="/add" className="text-xl rounded-full fixed bottom-0 right-0 m-2 p-2 bg-primary text-white">
+        <Plus />
+      </Link>
       <div className="w-full p-8 flex flex-wrap justify-center gap-8">
         {data.map(blog => <BlogCard title={blog.title} description={blog.description} />)}
       </div>
