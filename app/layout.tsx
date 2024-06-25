@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 export const metadata: Metadata = {
   title: "mlbytes",
   description: "An ML Blog.",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
