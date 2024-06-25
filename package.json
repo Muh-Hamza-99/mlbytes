@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
+    "@types/buble": "^0.20.5",
+    "@types/showdown": "^2.0.6",
+    "buble": "^0.20.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.396.0",
@@ -17,6 +20,7 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "showdown": "^2.1.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
