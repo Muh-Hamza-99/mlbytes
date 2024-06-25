@@ -15,11 +15,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "w-full")}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Navbar />
-          {children}
-        </ThemeProvider>
+      <body className={inter.className}>
+        <div className="w-full">
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+            <Navbar />
+            {children}
+          </ThemeProvider>
+        </div>
       </body>
     </html>
   );
