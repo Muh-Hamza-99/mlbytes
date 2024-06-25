@@ -1,4 +1,6 @@
 import BlogCard from "@/components/blogcard";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 const data: {title: string, description: string}[] = [
   {
@@ -17,8 +19,11 @@ const data: {title: string, description: string}[] = [
 
 export default function Home() {
   return (
-    <div className="w-full p-8 flex flex-wrap justify-center gap-8">
-      {data.map(blog => <BlogCard title={blog.title} description={blog.description} />)}
-    </div>
+    <>
+      <Button className="text-xl rounded-2xl fixed bottom-0 right-0 m-2">+</Button>
+      <div className="w-full p-8 flex flex-wrap justify-center gap-8">
+        {data.map(blog => <BlogCard title={blog.title} description={blog.description} />)}
+      </div>
+    </>
   );
 };
