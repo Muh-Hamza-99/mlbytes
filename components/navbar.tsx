@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { useTheme } from "next-themes";
 
 const Navbar = () => {
   return (
