@@ -3,10 +3,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 type Props = {
     title: string;
+    slug: string;
     description: string;
 }
 
-const BlogCard = ({ title, description }: Props) => {
+const BlogCard = ({ title, slug, description }: Props) => {
   return (
     <Card className="w-full md:w-[45%]">
         <CardHeader>
@@ -16,7 +17,7 @@ const BlogCard = ({ title, description }: Props) => {
             <p>{description}</p>
         </CardContent>
         <CardFooter>
-            <Link className="font-bold hover:text-primary transition" href="/">Read more</Link>
+            <Link className="font-bold hover:text-primary transition" href={`/b/${slug}`}>Read more</Link>
         </CardFooter>
     </Card>
   );

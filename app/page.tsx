@@ -25,7 +25,7 @@ export default function Home() {
         <Plus />
       </Link>
       <div className="w-full p-8 flex flex-wrap justify-center gap-8">
-        {data.map(blog => <BlogCard title={blog.title} description={blog.description} />)}
+        {data.map(blog => <BlogCard title={blog.title} slug={blog.title} description={blog.description} />)}
       </div>
     </>
   );
