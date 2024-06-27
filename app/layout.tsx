@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: Readonly<{children: React.React
         <div className="w-full min-h-screen">
             <Navbar />
             {children}
+            <Toaster />
         </div>
         <Footer />
       </body>

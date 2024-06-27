@@ -5,7 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import slugify from "slugify";
-import { useRouter } from "next/router";
 
 type Blog = {
     title: string;
@@ -26,7 +25,6 @@ export default function AddBlog() {
             const response = await fetch("/api/add", { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify({ ...blog, slug: slugify(blog.title, { lower: true, trim: true }) }) }).then(response => response.json());
             window.location.href = `/b/${response.blog.slug}`;
         } catch (error) {
-            console.log(error);
         } finally {
             setLoading(false);
         };
