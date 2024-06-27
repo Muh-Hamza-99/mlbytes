@@ -9,7 +9,7 @@ type Props = {
 
 const BlogCard = ({ title, slug, description }: Props) => {
   return (
-    <Card className="w-full md:w-[45%]">
+    <Card className="w-full">
         <CardHeader>
             <CardTitle>{title}</CardTitle>
         </CardHeader>
