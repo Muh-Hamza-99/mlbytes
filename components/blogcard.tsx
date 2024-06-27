@@ -1,23 +1,22 @@
 import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import { Blog } from "@prisma/client";
 
 type Props = {
-    title: string;
-    slug: string;
-    description: string;
+    blog: Blog
 }
 
-const BlogCard = ({ title, slug, description }: Props) => {
+const BlogCard = ({ blog }: Props) => {
   return (
     <Card className="w-full">
         <CardHeader>
-            <CardTitle>{title}</CardTitle>
+            <CardTitle>{blog.title}</CardTitle>
         </CardHeader>
         <CardContent>
-            <p>{description}</p>
+            <p>{blog.description}</p>
         </CardContent>
         <CardFooter>
-            <Link className="font-bold hover:text-primary transition" href={`/b/${slug}`}>Read more</Link>
+            <Link className="font-bold hover:text-primary transition" href={`/b/${blog.slug}`}>Read more</Link>
         </CardFooter>
     </Card>
   );
