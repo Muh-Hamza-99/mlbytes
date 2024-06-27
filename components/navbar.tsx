@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link";
-import { Button } from "./ui/button";
 
 const Navbar = () => {
   return (
@@ -9,10 +8,7 @@ const Navbar = () => {
         <h1 className="font-bold text-2xl text-primary">
           <Link href="/">mlbytes</Link>
         </h1>
-        <div className="flex items-center space-x-4">
-            <Link href="/about">About</Link>
-            <Button>Sign Up</Button>
-        </div>
+        <Link href="/about">About</Link>
     </div>
   );
 };
