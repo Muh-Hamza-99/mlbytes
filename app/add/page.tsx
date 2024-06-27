@@ -12,7 +12,7 @@ type Blog = {
     content: string;
 }
 
-export default async function AddBlog() {
+export default function AddBlog() {
     const [blog, setBlog] = useState<Blog>({ title: "", description: "", content: "" });
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setBlog(prev => ({ ...prev, [event.target.name]: event.target.value }));

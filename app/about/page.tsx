@@ -10,7 +10,7 @@ export default function AboutPage() {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, placeat consequuntur dolores nisi dolorem, totam esse illo unde impedit quia quae, nostrum enim debitis necessitatibus adipisci dolor mollitia ipsum molestias.</p>
             </div>
             <div className="w-full md:w-1/2 flex justify-center items-center">
-                <Image src="https://images.unsplash.com/1/type-away.jpg" width={500} height={500} alt="Typing away" className="rounded-lg" />
+                <Image src="https://images.unsplash.com/1/type-away.jpg" width={600} height={600} alt="Typing away" className="rounded-lg" />
             </div>
         </div>
     );
