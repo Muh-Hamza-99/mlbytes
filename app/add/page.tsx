@@ -14,10 +14,18 @@ type Blog = {
 }
 
 export default function AddBlog() {
+    let initBlog = { title: "", slug: "", description: "", content: "" };
+    if (typeof window !== "undefined") {
+        initBlog = JSON.parse(localStorage.getItem("blog") || JSON.stringify(initBlog));
+    }; 
     const [loading, setLoading] = useState<boolean>(false);
-    const [blog, setBlog] = useState<Blog>({ title: "", slug: "", description: "", content: "" });
+    const [blog, setBlog] = useState<Blog>(initBlog);
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        setBlog(prev => ({ ...prev, [event.target.name]: event.target.value }));
+        setBlog(prev => {
+            const updated = ({ ...prev, [event.target.name]: event.target.value });
+            localStorage.setItem('blog', JSON.stringify(updated));
+            return updated;
+        });
     };
     const onSubmit = async () => {
         try {
