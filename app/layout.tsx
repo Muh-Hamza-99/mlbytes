@@ -18,11 +18,11 @@ export default function RootLayout({ children }: Readonly<{children: React.React
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="w-full">
+        <div className="w-full min-h-screen">
             <Navbar />
             {children}
-            <Footer />
         </div>
+        <Footer />
       </body>
     </html>
   );
