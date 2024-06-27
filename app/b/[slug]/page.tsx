@@ -7,8 +7,9 @@ export default async function BlogPage({ params }: { params: { slug: string } } 
     if (!blog) return notFound();
     return (
         <div className="w-full">
-            <div className="h-48 p-8 bg-primary flex items-end">
-                <h1 className="text-2xl font-bold text-white">Understanding the JavaScript Modulo Operator</h1>
+            <div className="h-48 p-4 bg-primary flex items-end justify-between">
+                <h1 className="text-2xl font-bold text-white">{blog.title}</h1>
+                <span className="text-white text-sm">{`${blog.createdAt.getDate()}-${blog.createdAt.getMonth()}-${blog.createdAt.getFullYear()}`}</span>
             </div>
             <div className="p-8">
                 <MDXRemote source={blog.content} />
